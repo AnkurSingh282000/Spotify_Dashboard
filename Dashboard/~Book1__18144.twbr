@@ -1,0 +1,2652 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0624.2136                               -->
+<workbook original-version='18.1' source-build='2022.2.0 (20222.22.0624.2136)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <BasicButtonObject />
+    <BasicButtonObjectTextSupport />
+    <_.fcp.DashboardExportButton.true...DashboardExportButton />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='playlist_tracks+ (spotify)' inline='true' name='federated.0ggd04c09096ca12py4f01rd7ruh' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='mysql.0i1zbxi1ammevd1h44bt31bdmcwi'>
+            <connection class='mysql' dbname='spotify' odbc-native-protocol='' one-time-sql='' port='3306' server='localhost' source-charset='' username='root' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='mysql.0i1zbxi1ammevd1h44bt31bdmcwi' name='artist_details' table='[artist_details]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='mysql.0i1zbxi1ammevd1h44bt31bdmcwi' name='playlist_tracks' table='[playlist_tracks]' type='table' />
+          <relation connection='mysql.0i1zbxi1ammevd1h44bt31bdmcwi' name='artist_details' table='[artist_details]' type='table' />
+          <relation connection='mysql.0i1zbxi1ammevd1h44bt31bdmcwi' name='audio_features' table='[audio_features]' type='table' />
+          <relation connection='mysql.0i1zbxi1ammevd1h44bt31bdmcwi' name='related_artists' table='[related_artists]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[acousticness]' value='[audio_features].[acousticness]' />
+          <map key='[analysis_url]' value='[audio_features].[analysis_url]' />
+          <map key='[artist_id (artist_details)]' value='[artist_details].[artist_id]' />
+          <map key='[artist_id (related_artists)]' value='[related_artists].[artist_id]' />
+          <map key='[artist_id]' value='[playlist_tracks].[artist_id]' />
+          <map key='[artist_name (artist_details)]' value='[artist_details].[artist_name]' />
+          <map key='[artist_name]' value='[playlist_tracks].[artist_name]' />
+          <map key='[danceability]' value='[audio_features].[danceability]' />
+          <map key='[date_added]' value='[playlist_tracks].[date_added]' />
+          <map key='[date_released]' value='[playlist_tracks].[date_released]' />
+          <map key='[duration_ms]' value='[audio_features].[duration_ms]' />
+          <map key='[energy]' value='[audio_features].[energy]' />
+          <map key='[genres]' value='[artist_details].[genres]' />
+          <map key='[instrumentalness]' value='[audio_features].[instrumentalness]' />
+          <map key='[key]' value='[audio_features].[key]' />
+          <map key='[liveness]' value='[audio_features].[liveness]' />
+          <map key='[loudness]' value='[audio_features].[loudness]' />
+          <map key='[mode]' value='[audio_features].[mode]' />
+          <map key='[num_followers]' value='[artist_details].[num_followers]' />
+          <map key='[popularity]' value='[artist_details].[popularity]' />
+          <map key='[related_artist_id]' value='[related_artists].[related_artist_id]' />
+          <map key='[related_artist_name]' value='[related_artists].[related_artist_name]' />
+          <map key='[speechiness]' value='[audio_features].[speechiness]' />
+          <map key='[tempo]' value='[audio_features].[tempo]' />
+          <map key='[time_signature]' value='[audio_features].[time_signature]' />
+          <map key='[track_id (audio_features)]' value='[audio_features].[track_id]' />
+          <map key='[track_id]' value='[playlist_tracks].[track_id]' />
+          <map key='[track_name]' value='[playlist_tracks].[track_name]' />
+          <map key='[track_popularity]' value='[playlist_tracks].[track_popularity]' />
+          <map key='[track_rank]' value='[playlist_tracks].[track_rank]' />
+          <map key='[valence]' value='[audio_features].[valence]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>track_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[track_name]</local-name>
+            <parent-name>[playlist_tracks]</parent-name>
+            <remote-alias>track_name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16383</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playlist_tracks_B43A023A57824BF2B1E4AFD3430299DD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>track_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[track_id]</local-name>
+            <parent-name>[playlist_tracks]</parent-name>
+            <remote-alias>track_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16383</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playlist_tracks_B43A023A57824BF2B1E4AFD3430299DD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>artist_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[artist_name]</local-name>
+            <parent-name>[playlist_tracks]</parent-name>
+            <remote-alias>artist_name</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16383</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playlist_tracks_B43A023A57824BF2B1E4AFD3430299DD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>artist_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[artist_id]</local-name>
+            <parent-name>[playlist_tracks]</parent-name>
+            <remote-alias>artist_id</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16383</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playlist_tracks_B43A023A57824BF2B1E4AFD3430299DD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>track_popularity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[track_popularity]</local-name>
+            <parent-name>[playlist_tracks]</parent-name>
+            <remote-alias>track_popularity</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playlist_tracks_B43A023A57824BF2B1E4AFD3430299DD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_released</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date_released]</local-name>
+            <parent-name>[playlist_tracks]</parent-name>
+            <remote-alias>date_released</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playlist_tracks_B43A023A57824BF2B1E4AFD3430299DD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_added</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date_added]</local-name>
+            <parent-name>[playlist_tracks]</parent-name>
+            <remote-alias>date_added</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playlist_tracks_B43A023A57824BF2B1E4AFD3430299DD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>track_rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[track_rank]</local-name>
+            <parent-name>[playlist_tracks]</parent-name>
+            <remote-alias>track_rank</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[playlist_tracks_B43A023A57824BF2B1E4AFD3430299DD]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>artist_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[artist_id (artist_details)]</local-name>
+            <parent-name>[artist_details]</parent-name>
+            <remote-alias>artist_id</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16383</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[artist_details_F0F451B1610B4D90A849EEF4FEB52E1D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>artist_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[artist_name (artist_details)]</local-name>
+            <parent-name>[artist_details]</parent-name>
+            <remote-alias>artist_name</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16383</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[artist_details_F0F451B1610B4D90A849EEF4FEB52E1D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_followers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_followers]</local-name>
+            <parent-name>[artist_details]</parent-name>
+            <remote-alias>num_followers</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[artist_details_F0F451B1610B4D90A849EEF4FEB52E1D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>genres</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[genres]</local-name>
+            <parent-name>[artist_details]</parent-name>
+            <remote-alias>genres</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16383</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[artist_details_F0F451B1610B4D90A849EEF4FEB52E1D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>popularity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[popularity]</local-name>
+            <parent-name>[artist_details]</parent-name>
+            <remote-alias>popularity</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[artist_details_F0F451B1610B4D90A849EEF4FEB52E1D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>track_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[track_id (audio_features)]</local-name>
+            <parent-name>[audio_features]</parent-name>
+            <remote-alias>track_id</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16383</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[audio_features_36756A58C2664F52AEE56365DF2C1633]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>analysis_url</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[analysis_url]</local-name>
+            <parent-name>[audio_features]</parent-name>
+            <remote-alias>analysis_url</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16383</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[audio_features_36756A58C2664F52AEE56365DF2C1633]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>acousticness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[acousticness]</local-name>
+            <parent-name>[audio_features]</parent-name>
+            <remote-alias>acousticness</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[audio_features_36756A58C2664F52AEE56365DF2C1633]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>danceability</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[danceability]</local-name>
+            <parent-name>[audio_features]</parent-name>
+            <remote-alias>danceability</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[audio_features_36756A58C2664F52AEE56365DF2C1633]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration_ms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[duration_ms]</local-name>
+            <parent-name>[audio_features]</parent-name>
+            <remote-alias>duration_ms</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[audio_features_36756A58C2664F52AEE56365DF2C1633]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>energy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[energy]</local-name>
+            <parent-name>[audio_features]</parent-name>
+            <remote-alias>energy</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[audio_features_36756A58C2664F52AEE56365DF2C1633]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>instrumentalness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[instrumentalness]</local-name>
+            <parent-name>[audio_features]</parent-name>
+            <remote-alias>instrumentalness</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[audio_features_36756A58C2664F52AEE56365DF2C1633]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>key</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[key]</local-name>
+            <parent-name>[audio_features]</parent-name>
+            <remote-alias>key</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[audio_features_36756A58C2664F52AEE56365DF2C1633]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>liveness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[liveness]</local-name>
+            <parent-name>[audio_features]</parent-name>
+            <remote-alias>liveness</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[audio_features_36756A58C2664F52AEE56365DF2C1633]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loudness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[loudness]</local-name>
+            <parent-name>[audio_features]</parent-name>
+            <remote-alias>loudness</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[audio_features_36756A58C2664F52AEE56365DF2C1633]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[mode]</local-name>
+            <parent-name>[audio_features]</parent-name>
+            <remote-alias>mode</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[audio_features_36756A58C2664F52AEE56365DF2C1633]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speechiness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[speechiness]</local-name>
+            <parent-name>[audio_features]</parent-name>
+            <remote-alias>speechiness</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[audio_features_36756A58C2664F52AEE56365DF2C1633]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tempo</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tempo]</local-name>
+            <parent-name>[audio_features]</parent-name>
+            <remote-alias>tempo</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[audio_features_36756A58C2664F52AEE56365DF2C1633]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_signature</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[time_signature]</local-name>
+            <parent-name>[audio_features]</parent-name>
+            <remote-alias>time_signature</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[audio_features_36756A58C2664F52AEE56365DF2C1633]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>valence</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[valence]</local-name>
+            <parent-name>[audio_features]</parent-name>
+            <remote-alias>valence</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[audio_features_36756A58C2664F52AEE56365DF2C1633]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>artist_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[artist_id (related_artists)]</local-name>
+            <parent-name>[related_artists]</parent-name>
+            <remote-alias>artist_id</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16383</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[related_artists_8504F052D9FA43F1A24A8699B5B0F1CE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>related_artist_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[related_artist_id]</local-name>
+            <parent-name>[related_artists]</parent-name>
+            <remote-alias>related_artist_id</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16383</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[related_artists_8504F052D9FA43F1A24A8699B5B0F1CE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>related_artist_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[related_artist_name]</local-name>
+            <parent-name>[related_artists]</parent-name>
+            <remote-alias>related_artist_name</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16383</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WLONGVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[related_artists_8504F052D9FA43F1A24A8699B5B0F1CE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:Calculation_871165053760659459:qk]&quot;' value='Duration (mins)' />
+          <alias key='&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]&quot;' value='Danceability' />
+          <alias key='&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:energy:qk]&quot;' value='Energy' />
+          <alias key='&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:liveness:qk]&quot;' value='Liveness' />
+          <alias key='&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:loudness:qk]&quot;' value='Loudness' />
+          <alias key='&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:speechiness:qk]&quot;' value='Speechiness' />
+          <alias key='&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]&quot;' value='Track Popularity' />
+          <alias key='&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:valence:qk]&quot;' value='Valence' />
+        </aliases>
+      </column>
+      <column caption='Rank' datatype='string' name='[Calculation_871165053702324224]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR([track_rank])' />
+      </column>
+      <column caption='Popularity(Tracks)' datatype='string' name='[Calculation_871165053704441857]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='STR([track_popularity])' />
+      </column>
+      <column caption='Duration (mins)' datatype='real' name='[Calculation_871165053760659459]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[duration_ms]/60000' />
+      </column>
+      <column caption='number of tracks' datatype='integer' name='[Calculation_871165053804134404]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='count([track_name])' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Duration (mins) (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='-1' formula='[Calculation_871165053760659459]' peg='0' size='0.358' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='artist_details' datatype='table' name='[__tableau_internal_object_id__].[artist_details_F0F451B1610B4D90A849EEF4FEB52E1D]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='audio_features' datatype='table' name='[__tableau_internal_object_id__].[audio_features_36756A58C2664F52AEE56365DF2C1633]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='playlist_tracks' datatype='table' name='[__tableau_internal_object_id__].[playlist_tracks_B43A023A57824BF2B1E4AFD3430299DD]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='related_artists' datatype='table' name='[__tableau_internal_object_id__].[related_artists_8504F052D9FA43F1A24A8699B5B0F1CE]' role='measure' type='quantitative' />
+      <column caption='Acousticness' datatype='real' name='[acousticness]' role='measure' type='quantitative' />
+      <column caption='Analysis Url' datatype='string' name='[analysis_url]' role='dimension' type='nominal' />
+      <column caption='Artist Id (Artist Details)' datatype='string' name='[artist_id (artist_details)]' role='dimension' type='nominal' />
+      <column caption='Artist Id (Related Artists)' datatype='string' name='[artist_id (related_artists)]' role='dimension' type='nominal' />
+      <column caption='Artist Id' datatype='string' name='[artist_id]' role='dimension' type='nominal' />
+      <column caption='Artist Name (Artist Details)' datatype='string' name='[artist_name (artist_details)]' role='dimension' type='nominal' />
+      <column caption='Artist Name' datatype='string' name='[artist_name]' role='dimension' type='nominal' />
+      <column caption='Danceability' datatype='real' name='[danceability]' role='measure' type='quantitative' />
+      <column caption='Date Added' datatype='datetime' name='[date_added]' role='dimension' type='ordinal' />
+      <column caption='Date Released' datatype='datetime' name='[date_released]' role='dimension' type='ordinal' />
+      <column caption='Duration Ms' datatype='integer' name='[duration_ms]' role='measure' type='quantitative' />
+      <column caption='Energy' datatype='real' name='[energy]' role='measure' type='quantitative' />
+      <column caption='Genres' datatype='string' name='[genres]' role='dimension' type='nominal' />
+      <column caption='Instrumentalness' datatype='real' name='[instrumentalness]' role='measure' type='quantitative' />
+      <column caption='Key' datatype='integer' name='[key]' role='dimension' type='ordinal' />
+      <column caption='Liveness' datatype='real' name='[liveness]' role='measure' type='quantitative' />
+      <column caption='Loudness' datatype='real' name='[loudness]' role='measure' type='quantitative' />
+      <column caption='Mode' datatype='integer' name='[mode]' role='measure' type='quantitative' />
+      <column caption='Num Followers' datatype='integer' name='[num_followers]' role='measure' type='quantitative' />
+      <column caption='Popularity' datatype='integer' name='[popularity]' role='measure' type='quantitative' />
+      <column caption='Related Artist Id' datatype='string' name='[related_artist_id]' role='dimension' type='nominal' />
+      <column caption='Related Artist Name' datatype='string' name='[related_artist_name]' role='dimension' type='nominal' />
+      <column caption='Speechiness' datatype='real' name='[speechiness]' role='measure' type='quantitative' />
+      <column caption='Tempo' datatype='real' name='[tempo]' role='measure' type='quantitative' />
+      <column caption='Time Signature' datatype='integer' name='[time_signature]' role='measure' type='quantitative' />
+      <column caption='Track Id (Audio Features)' datatype='string' name='[track_id (audio_features)]' role='dimension' type='nominal' />
+      <column caption='Track Id' datatype='string' name='[track_id]' role='dimension' type='nominal' />
+      <column caption='Track Name' datatype='string' name='[track_name]' role='dimension' type='nominal' />
+      <column caption='Track Popularity' datatype='integer' name='[track_popularity]' role='measure' type='quantitative' />
+      <column caption='Track Rank' datatype='integer' name='[track_rank]' role='measure' type='quantitative' />
+      <column caption='Valence' datatype='real' name='[valence]' role='measure' type='quantitative' />
+      <column-instance column='[danceability]' derivation='Count' name='[cnt:danceability:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[liveness]' derivation='Count' name='[cnt:liveness:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[track_rank]' derivation='Count' name='[cnt:track_rank:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Calculation_871165053760659459]' derivation='Min' name='[min:Calculation_871165053760659459:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[danceability]' derivation='Min' name='[min:danceability:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[energy]' derivation='Min' name='[min:energy:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[liveness]' derivation='Min' name='[min:liveness:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[loudness]' derivation='Min' name='[min:loudness:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[speechiness]' derivation='Min' name='[min:speechiness:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[track_popularity]' derivation='Min' name='[min:track_popularity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[valence]' derivation='Min' name='[min:valence:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[artist_name]' derivation='None' name='[none:artist_name:nk]' pivot='key' type='nominal' />
+      <column-instance column='[track_name]' derivation='None' name='[none:track_name:nk]' pivot='key' type='nominal' />
+      <column-instance column='[danceability]' derivation='Sum' name='[sum:danceability:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[loudness]' derivation='Sum' name='[sum:loudness:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[speechiness]' derivation='Sum' name='[sum:speechiness:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[track_popularity]' derivation='Sum' name='[sum:track_popularity:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[valence]' derivation='Sum' name='[sum:valence:qk]' pivot='key' type='quantitative' />
+      <group caption='Action (Artist Name)' hidden='true' name='[Action (Artist Name)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[artist_name]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Rank,Track Name)' hidden='true' name='[Action (Rank,Track Name)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Calculation_871165053702324224]' />
+          <groupfilter function='level-members' level='[track_name]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Track Name)' hidden='true' name='[Action (Track Name)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[track_name]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[cnt:track_rank:ok]' type='palette'>
+            <map to='#499894'>
+              <bucket>31</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>144</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>84</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>297</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>15</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>16</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>108</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>850</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>42</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>164</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>32</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>152</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>18</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>116</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>54</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>224</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>88</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>333</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>48</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>184</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>20</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>120</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>43</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>171</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>45</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>176</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>49</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>208</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>64</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>252</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>36</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>153</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>25</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>23</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>140</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>99</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>450</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>47</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>180</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>40</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>156</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>104</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>600</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:artist_name:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;AP Dhillon&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Harjas Harjaayi&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Parampara Tandon&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Sukriti Kakar&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;40k&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;DG IMMORTALS&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Kumaar&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Selena Gomez&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Vishal-Shekhar&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Alka Yagnik&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;G. V. Prakash&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Madhur Sharma&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Shilpa Rao&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Badshah&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Intense&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Rashmi Virag&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Thaman S&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Arijit Singh&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Ikky&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Parmish Verma&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Surya Ragunaathan&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Amitabh Bhattacharya&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Gurinder Gill&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Mansheel Gujral&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Shubh&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;DARK HORSE&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Kim Petras&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Sam Smith&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Vishal Dadlani&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Aditya A&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Ed Sheeran&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Laddi Chahal&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Shae Gill&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Yohani&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Chris Brown&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Kaifi Khalil&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Sachet-Parampara&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Vilen&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Anuv Jain&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Gurlez Akhtar&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;MC STAN&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Shweta Mohan&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Caralisa Monteiro&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Jasleen Royal&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Rema&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;The Paul&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Chani Nattan&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Jassa Dhillon&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Romy&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;The Weeknd&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Daft Punk&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Karan Aujla&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Sachin-Jigar&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;VIRTUAL_AF&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Devika Badyal&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;King&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Sanjoy&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Vishal Mishra&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Asees Kaur&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Imagine Dragons&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Pritam&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Tanishk Bagchi&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Anvita Dutt&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Guru Randhawa&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Nikhita Gandhi&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Stephen Sanchez&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Akhil Sachdeva&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Em Beihold&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Libianca&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Sharn&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Charan&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Jubin Nautiyal&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Sachet Tandon&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;thiarajxtt&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;B Praak&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Inderpal Moga&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Raga&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Thalapathy Vijay&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Ali Sethi&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Eminem&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;M.M.Manasi&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Shekhar Ravjiani&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:track_name:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Chaand Baaliyan&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;Moon Rise&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;We Rollin&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;52 Bars&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Agar Tum Saath Ho (From \&quot;Tamasha\&quot;)&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Kyun Dhunde&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Starboy&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Basti Ka Hasti&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Manike (From \&quot;Thank God\&quot;)&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Under The Influence&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Elevated&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Perfect&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Channa Ve&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;No Love&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Besharam Rang (From \&quot;Pathaan\&quot;)&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Mastaaru Mastaaru&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Unholy (feat. Kim Petras)&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Kali Kali Zulfon Ke (Lo-Fi)&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;Rubicon Drill&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Apna Bana Le&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Maan Meri Jaan&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Take It Easy&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Kaise Hua (From \&quot;Kabir Singh\&quot;)&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Ranjha (From \&quot;Shershaah\&quot;)&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Bones&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Mi Amor&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Until I Found You (with Em Beihold) - Em Beihold Version&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Excuses&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Players&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Jhoome Jo Pathaan&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Pyaar Hota Kayi Baar Hai (From \&quot;Tu Jhoothi Main Makkaar\&quot;)&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;KALESHI CHORI&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Ranjithame (From \&quot;Varisu\&quot;)&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;Kesariya&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;SPAIN&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Daku&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Pasoori&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Calm Down (with Selena Gomez)&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Mockingbird&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Vaa Vaathi&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Baarishein&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Maiyya Mainu (From \&quot;Jersey\&quot;)&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Tere Pyaar Mein&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Kahani Suno 2.0&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Raataan Lambiyan (From \&quot;Shershaah\&quot;)&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Ek Din Pyaar&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;People&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Baller&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Malang Sajna&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Tu Aake Dekhle&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[cnt:danceability:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:danceability:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:valence:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[cnt:liveness:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:liveness:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:valence:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:speechiness:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:speechiness:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:energy:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:track_popularity:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:Calculation_871165053760659459:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:loudness:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:loudness:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='artist_details' id='artist_details_F0F451B1610B4D90A849EEF4FEB52E1D'>
+            <properties context=''>
+              <relation connection='mysql.0i1zbxi1ammevd1h44bt31bdmcwi' name='artist_details' table='[artist_details]' type='table' />
+            </properties>
+          </object>
+          <object caption='audio_features' id='audio_features_36756A58C2664F52AEE56365DF2C1633'>
+            <properties context=''>
+              <relation connection='mysql.0i1zbxi1ammevd1h44bt31bdmcwi' name='audio_features' table='[audio_features]' type='table' />
+            </properties>
+          </object>
+          <object caption='playlist_tracks' id='playlist_tracks_B43A023A57824BF2B1E4AFD3430299DD'>
+            <properties context=''>
+              <relation connection='mysql.0i1zbxi1ammevd1h44bt31bdmcwi' name='playlist_tracks' table='[playlist_tracks]' type='table' />
+            </properties>
+          </object>
+          <object caption='related_artists' id='related_artists_8504F052D9FA43F1A24A8699B5B0F1CE'>
+            <properties context=''>
+              <relation connection='mysql.0i1zbxi1ammevd1h44bt31bdmcwi' name='related_artists' table='[related_artists]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[artist_id]' />
+              <expression op='[artist_id (artist_details)]' />
+            </expression>
+            <first-end-point object-id='playlist_tracks_B43A023A57824BF2B1E4AFD3430299DD' />
+            <second-end-point object-id='artist_details_F0F451B1610B4D90A849EEF4FEB52E1D' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[track_id]' />
+              <expression op='[track_id (audio_features)]' />
+            </expression>
+            <first-end-point object-id='playlist_tracks_B43A023A57824BF2B1E4AFD3430299DD' />
+            <second-end-point object-id='audio_features_36756A58C2664F52AEE56365DF2C1633' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[artist_id]' />
+              <expression op='[artist_id (related_artists)]' />
+            </expression>
+            <first-end-point object-id='playlist_tracks_B43A023A57824BF2B1E4AFD3430299DD' />
+            <second-end-point object-id='related_artists_8504F052D9FA43F1A24A8699B5B0F1CE' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.0ggd04c09096ca12py4f01rd7ruh'>
+      <datasources>
+        <datasource caption='playlist_tracks+ (spotify)' name='federated.0ggd04c09096ca12py4f01rd7ruh' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0ggd04c09096ca12py4f01rd7ruh'>
+        <column-instance column='[track_rank]' derivation='Min' name='[min:track_rank:qk]' pivot='key' type='quantitative' />
+        <column caption='Num Followers' datatype='integer' name='[num_followers]' role='measure' type='quantitative' />
+        <column-instance column='[num_followers]' derivation='Sum' name='[sum:num_followers:qk]' pivot='key' type='quantitative' />
+        <column caption='Track Rank' datatype='integer' name='[track_rank]' role='measure' type='quantitative' />
+      </datasource-dependencies>
+      <filter class='quantitative' column='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]' included-values='in-range'>
+        <min>1</min>
+        <max>20</max>
+      </filter>
+      <filter class='quantitative' column='[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]' included-values='in-range-or-null'>
+        <min>11775</min>
+        <max>110047675</max>
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Highlight 2 (generated)' name='[Action2_71E1DB93C76A42E9B8A228FDA3ACCD94]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Measure Names' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action5_D50753FA3C6D47E698C121ED59C09158]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Sheet 3' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 1 (generated)' name='[Action6_B5239DB07941430EB2694A2A24EC475F]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Overview1 ' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Highlight 1 (generated)' name='[Action6_C76AB07619F4434CBE988CD99121B289]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Sheet 3' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Measure Names' />
+        <param name='target' value='Sheet 3' />
+      </command>
+    </action>
+    <action caption='Filter 4 (generated)' name='[Action7_9FB6F1BF3F804504A25A67D403D69BAC]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Overview2' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Overview1 '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff' fontname='Tableau Bold'>Top Tracks</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='playlist_tracks+ (spotify)' name='federated.0ggd04c09096ca12py4f01rd7ruh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ggd04c09096ca12py4f01rd7ruh'>
+            <column caption='Rank' datatype='string' name='[Calculation_871165053702324224]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='STR([track_rank])' />
+            </column>
+            <column-instance column='[date_released]' derivation='Attribute' name='[attr:date_released:ok]' pivot='key' type='ordinal' />
+            <column caption='Date Released' datatype='datetime' name='[date_released]' role='dimension' type='ordinal' />
+            <column-instance column='[track_popularity]' derivation='Min' name='[min:track_popularity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[track_rank]' derivation='Min' name='[min:track_rank:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_871165053702324224]' derivation='None' name='[none:Calculation_871165053702324224:nk]' pivot='key' type='nominal' />
+            <column-instance column='[date_released]' derivation='None' name='[none:date_released:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[track_name]' derivation='None' name='[none:track_name:nk]' pivot='key' type='nominal' />
+            <column caption='Num Followers' datatype='integer' name='[num_followers]' role='measure' type='quantitative' />
+            <column-instance column='[num_followers]' derivation='Sum' name='[sum:num_followers:qk]' pivot='key' type='quantitative' />
+            <column caption='Track Name' datatype='string' name='[track_name]' role='dimension' type='nominal' />
+            <column caption='Track Popularity' datatype='integer' name='[track_popularity]' role='measure' type='quantitative' />
+            <column caption='Track Rank' datatype='integer' name='[track_rank]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ggd04c09096ca12py4f01rd7ruh].[Action (Rank,Track Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action5_D50753FA3C6D47E698C121ED59C09158]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_871165053702324224]' />
+              <groupfilter function='level-members' level='[track_name]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ggd04c09096ca12py4f01rd7ruh].[Action (Track Name)]'>
+            <groupfilter function='level-members' level='[track_name]' user:ui-action-filter='[Action7_9FB6F1BF3F804504A25A67D403D69BAC]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:Calculation_871165053702324224:nk]'>
+            <groupfilter function='level-members' level='[none:Calculation_871165053702324224:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:date_released:qk]' included-values='in-range-or-null'>
+            <min>#2004-11-12 00:00:00#</min>
+            <max>#2023-02-10 00:00:00#</max>
+          </filter>
+          <slices>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[none:Calculation_871165053702324224:nk]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[none:date_released:qk]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[Action (Rank,Track Name)]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[Action (Track Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' scope='cols' value='Track Popularity' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' value='#e6e6e6' />
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' value='Tableau Bold' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' value='#ffffff' />
+            <format attr='border-width' scope='cols' value='0' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:Calculation_871165053702324224:nk]' value='48' />
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='width' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:track_name:nk]' value='156' />
+            <format attr='height-header' value='19' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:track_name:nk]' value='Tableau Bold' />
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:Calculation_871165053702324224:nk]' value='Tableau Bold' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:track_name:nk]' value='#ffffff' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:Calculation_871165053702324224:nk]' value='#ffffff' />
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' value='Tableau Bold' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='subtotal' scope='cols' value='#f5f5f5' />
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]' value='Track Rank' />
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='color' value='#ffffff' />
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='text-align' value='auto' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.0ggd04c09096ca12py4f01rd7ruh].[attr:date_released:ok]' />
+              <text column='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#1db954' />
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0ggd04c09096ca12py4f01rd7ruh].[none:Calculation_871165053702324224:nk] / [federated.0ggd04c09096ca12py4f01rd7ruh].[none:track_name:nk])</rows>
+        <cols>[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]</cols>
+      </table>
+      <simple-id uuid='{6D734EE8-903D-456E-843F-F11F747EE12C}' />
+    </worksheet>
+    <worksheet name='Overview2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='playlist_tracks+ (spotify)' name='federated.0ggd04c09096ca12py4f01rd7ruh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ggd04c09096ca12py4f01rd7ruh'>
+            <column caption='Rank' datatype='string' name='[Calculation_871165053702324224]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='STR([track_rank])' />
+            </column>
+            <column caption='Danceability' datatype='real' name='[danceability]' role='measure' type='quantitative' />
+            <column caption='Date Released' datatype='datetime' name='[date_released]' role='dimension' type='ordinal' />
+            <column caption='Energy' datatype='real' name='[energy]' role='measure' type='quantitative' />
+            <column caption='Loudness' datatype='real' name='[loudness]' role='measure' type='quantitative' />
+            <column-instance column='[danceability]' derivation='Min' name='[min:danceability:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[energy]' derivation='Min' name='[min:energy:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[loudness]' derivation='Min' name='[min:loudness:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[speechiness]' derivation='Min' name='[min:speechiness:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[tempo]' derivation='Min' name='[min:tempo:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[track_popularity]' derivation='Min' name='[min:track_popularity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[track_rank]' derivation='Min' name='[min:track_rank:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date_released]' derivation='MY' name='[my:date_released:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_871165053702324224]' derivation='None' name='[none:Calculation_871165053702324224:nk]' pivot='key' type='nominal' />
+            <column-instance column='[track_name]' derivation='None' name='[none:track_name:nk]' pivot='key' type='nominal' />
+            <column caption='Num Followers' datatype='integer' name='[num_followers]' role='measure' type='quantitative' />
+            <column caption='Speechiness' datatype='real' name='[speechiness]' role='measure' type='quantitative' />
+            <column-instance column='[num_followers]' derivation='Sum' name='[sum:num_followers:qk]' pivot='key' type='quantitative' />
+            <column caption='Tempo' datatype='real' name='[tempo]' role='measure' type='quantitative' />
+            <column caption='Track Name' datatype='string' name='[track_name]' role='dimension' type='nominal' />
+            <column caption='Track Popularity' datatype='integer' name='[track_popularity]' role='measure' type='quantitative' />
+            <column caption='Track Rank' datatype='integer' name='[track_rank]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ggd04c09096ca12py4f01rd7ruh].[Action (Rank,Track Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action6_B5239DB07941430EB2694A2A24EC475F]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_871165053702324224]' />
+              <groupfilter function='level-members' level='[track_name]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ggd04c09096ca12py4f01rd7ruh].[my:date_released:ok]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[my:date_released:ok]' />
+              <groupfilter function='member' level='[my:date_released:ok]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:Calculation_871165053702324224:nk]'>
+            <groupfilter function='level-members' level='[none:Calculation_871165053702324224:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:track_name:nk]'>
+            <groupfilter expression='MIN([track_rank]) &lt;= 20' function='filter' user:ui-filter-by-field='true' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:track_name:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:track_name:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Apna Bana Le&quot;</bucket>
+              <bucket>&quot;Baller&quot;</bucket>
+              <bucket>&quot;Bones&quot;</bucket>
+              <bucket>&quot;Chaand Baaliyan&quot;</bucket>
+              <bucket>&quot;Daku&quot;</bucket>
+              <bucket>&quot;Jhoome Jo Pathaan&quot;</bucket>
+              <bucket>&quot;Besharam Rang (From \&quot;Pathaan\&quot;)&quot;</bucket>
+              <bucket>&quot;Kahani Suno 2.0&quot;</bucket>
+              <bucket>&quot;Kali Kali Zulfon Ke (Lo-Fi)&quot;</bucket>
+              <bucket>&quot;Kesariya&quot;</bucket>
+              <bucket>&quot;Maan Meri Jaan&quot;</bucket>
+              <bucket>&quot;Malang Sajna&quot;</bucket>
+              <bucket>&quot;Mi Amor&quot;</bucket>
+              <bucket>&quot;No Love&quot;</bucket>
+              <bucket>&quot;Players&quot;</bucket>
+              <bucket>&quot;Pyaar Hota Kayi Baar Hai (From \&quot;Tu Jhoothi Main Makkaar\&quot;)&quot;</bucket>
+              <bucket>&quot;Ranjha (From \&quot;Shershaah\&quot;)&quot;</bucket>
+              <bucket>&quot;Tere Pyaar Mein&quot;</bucket>
+              <bucket>&quot;Tu Aake Dekhle&quot;</bucket>
+              <bucket>&quot;Vaa Vaathi&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[none:Calculation_871165053702324224:nk]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[none:track_name:nk]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[my:date_released:ok]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[Action (Rank,Track Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' scope='rows' value='Popularity' />
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]' scope='cols' value='Danceability' />
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:loudness:qk]' scope='rows' value='Loudness' />
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:tempo:qk]' scope='rows' value='Tempo' />
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:speechiness:qk]' scope='cols' value='Speechiness' />
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:energy:qk]' scope='cols' value='Energy' />
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]' scope='cols' value='Track Rank' />
+            <format attr='tick-color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]' value='Tableau Bold' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:loudness:qk]' value='#ffffff' />
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:loudness:qk]' value='Tableau Bold' />
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' value='Tableau Bold' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' value='#ffffff' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' value='Tableau Bold' />
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]' value='Tableau Bold' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:loudness:qk]' value='#ffffff' />
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:loudness:qk]' value='Tableau Bold' />
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:speechiness:qk]' value='Tableau Bold' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:speechiness:qk]' value='#ffffff' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:tempo:qk]' value='#ffffff' />
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:tempo:qk]' value='Tableau Bold' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]' value='#ffffff' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' value='#ffffff' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:energy:qk]' value='#ffffff' />
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:energy:qk]' value='Tableau Bold' />
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]' value='Tableau Bold' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='border-style' data-class='subtotal' scope='rows' value='solid' />
+            <format attr='border-style' data-class='subtotal' scope='cols' value='solid' />
+            <format attr='border-width' data-class='total' scope='rows' value='1' />
+            <format attr='border-style' data-class='total' scope='rows' value='solid' />
+            <format attr='border-width' data-class='subtotal' scope='cols' value='5' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='rows' value='1' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='dashed' />
+            <format attr='stroke-size' scope='cols' value='1' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='4' />
+            <format attr='stroke-size' scope='cols' value='5' />
+          </style-rule>
+          <style-rule element='axis-title'>
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' value='Tableau Bold' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' value='11' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]' value='#ffffff' />
+            <format attr='font-size' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]' value='11' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:track_name:nk]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='true' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:track_name:nk]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='true' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:loudness:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:track_name:nk]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='true' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='9' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:tempo:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:track_name:nk]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='true' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='size' value='1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk] + ([federated.0ggd04c09096ca12py4f01rd7ruh].[min:loudness:qk] + [federated.0ggd04c09096ca12py4f01rd7ruh].[min:tempo:qk]))</rows>
+        <cols>([federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk] + ([federated.0ggd04c09096ca12py4f01rd7ruh].[min:speechiness:qk] + ([federated.0ggd04c09096ca12py4f01rd7ruh].[min:energy:qk] + [federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk])))</cols>
+      </table>
+      <simple-id uuid='{8A03CE21-8ACF-4606-88A0-E03EF548989E}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff' fontname='Tableau Bold'>Audio Features</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='playlist_tracks+ (spotify)' name='federated.0ggd04c09096ca12py4f01rd7ruh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ggd04c09096ca12py4f01rd7ruh'>
+            <column caption='Rank' datatype='string' name='[Calculation_871165053702324224]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='STR([track_rank])' />
+            </column>
+            <column caption='Duration (mins)' datatype='real' name='[Calculation_871165053760659459]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[duration_ms]/60000' />
+            </column>
+            <column caption='Danceability' datatype='real' name='[danceability]' role='measure' type='quantitative' />
+            <column caption='Duration Ms' datatype='integer' name='[duration_ms]' role='measure' type='quantitative' />
+            <column caption='Energy' datatype='real' name='[energy]' role='measure' type='quantitative' />
+            <column caption='Liveness' datatype='real' name='[liveness]' role='measure' type='quantitative' />
+            <column caption='Loudness' datatype='real' name='[loudness]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_871165053760659459]' derivation='Min' name='[min:Calculation_871165053760659459:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[danceability]' derivation='Min' name='[min:danceability:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[energy]' derivation='Min' name='[min:energy:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[liveness]' derivation='Min' name='[min:liveness:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[loudness]' derivation='Min' name='[min:loudness:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[speechiness]' derivation='Min' name='[min:speechiness:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[track_popularity]' derivation='Min' name='[min:track_popularity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[track_rank]' derivation='Min' name='[min:track_rank:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[valence]' derivation='Min' name='[min:valence:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_871165053702324224]' derivation='None' name='[none:Calculation_871165053702324224:nk]' pivot='key' type='nominal' />
+            <column-instance column='[track_name]' derivation='None' name='[none:track_name:nk]' pivot='key' type='nominal' />
+            <column caption='Num Followers' datatype='integer' name='[num_followers]' role='measure' type='quantitative' />
+            <column caption='Speechiness' datatype='real' name='[speechiness]' role='measure' type='quantitative' />
+            <column-instance column='[num_followers]' derivation='Sum' name='[sum:num_followers:qk]' pivot='key' type='quantitative' />
+            <column caption='Track Name' datatype='string' name='[track_name]' role='dimension' type='nominal' />
+            <column caption='Track Popularity' datatype='integer' name='[track_popularity]' role='measure' type='quantitative' />
+            <column caption='Track Rank' datatype='integer' name='[track_rank]' role='measure' type='quantitative' />
+            <column caption='Valence' datatype='real' name='[valence]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0ggd04c09096ca12py4f01rd7ruh].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:Calculation_871165053760659459:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:energy:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:liveness:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:loudness:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:speechiness:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0ggd04c09096ca12py4f01rd7ruh].[min:valence:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.0ggd04c09096ca12py4f01rd7ruh].[Action (Rank,Track Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_43B0AED842D64C1EB05EF1D0B1F92352]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_871165053702324224]' />
+              <groupfilter function='level-members' level='[track_name]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ggd04c09096ca12py4f01rd7ruh].[Action (Track Name)]'>
+            <groupfilter function='level-members' level='[track_name]' user:ui-action-filter='[Action7_9FB6F1BF3F804504A25A67D403D69BAC]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[Action (Rank,Track Name)]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[Action (Track Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:liveness:qk]' field-type='quantitative' fold='true' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:valence:qk]' field-type='quantitative' fold='true' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' field-type='quantitative' fold='true' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:liveness:qk]' scope='cols' value='Liveness' />
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:energy:qk]' scope='cols' value='Energy' />
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:valence:qk]' scope='cols' value='Valence' />
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' scope='cols' value='Track Popularity' />
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:Calculation_871165053760659459:qk]' scope='cols' value='Duration (mins)' />
+            <encoding attr='space' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]' field-type='quantitative' fold='true' scope='cols' type='space' />
+            <format attr='height' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:speechiness:qk]' value='65' />
+            <format attr='height' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:liveness:qk]' value='65' />
+            <format attr='height' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:energy:qk]' value='65' />
+            <format attr='height' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:valence:qk]' value='65' />
+            <format attr='height' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:Calculation_871165053760659459:qk]' value='65' />
+            <format attr='height' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' value='65' />
+            <format attr='height' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:loudness:qk]' value='65' />
+            <format attr='height' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]' value='65' />
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:speechiness:qk]' scope='cols' value='Speechiness' />
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]' scope='cols' value='Danceability' />
+            <format attr='title' class='0' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:loudness:qk]' scope='cols' value='Loudness' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:track_name:nk]' value='136' />
+            <format attr='width' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:Calculation_871165053702324224:nk]' value='44' />
+          </style-rule>
+          <style-rule element='field-labels-decoration'>
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' scope='rows' value='#ffffff' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:Calculation_871165053760659459:qk]' value='#ffffff' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:energy:qk]' value='#ffffff' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:liveness:qk]' value='#ffffff' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:valence:qk]' value='#ffffff' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]' value='#ffffff' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]' value='#ffffff' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:loudness:qk]' value='#ffffff' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:speechiness:qk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]' value='Track Rank' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ggd04c09096ca12py4f01rd7ruh].[:Measure Names]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='false' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='102' />
+                <format attr='maxwidth' value='102' />
+                <format attr='minheight' value='420' />
+                <format attr='maxheight' value='420' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:Calculation_871165053760659459:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ggd04c09096ca12py4f01rd7ruh].[:Measure Names]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='false' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:energy:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ggd04c09096ca12py4f01rd7ruh].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:liveness:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ggd04c09096ca12py4f01rd7ruh].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ggd04c09096ca12py4f01rd7ruh].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:valence:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ggd04c09096ca12py4f01rd7ruh].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:speechiness:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ggd04c09096ca12py4f01rd7ruh].[:Measure Names]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='false' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='102' />
+                <format attr='maxwidth' value='102' />
+                <format attr='minheight' value='420' />
+                <format attr='maxheight' value='420' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:loudness:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ggd04c09096ca12py4f01rd7ruh].[:Measure Names]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='false' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='102' />
+                <format attr='maxwidth' value='102' />
+                <format attr='minheight' value='420' />
+                <format attr='maxheight' value='420' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='9' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ggd04c09096ca12py4f01rd7ruh].[:Measure Names]' />
+            </encodings>
+            <dropline drop-when='selected' haslabel='false' x-axis='true' y-axis='false' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='102' />
+                <format attr='maxwidth' value='102' />
+                <format attr='minheight' value='420' />
+                <format attr='maxheight' value='420' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0ggd04c09096ca12py4f01rd7ruh].[none:Calculation_871165053702324224:nk] / [federated.0ggd04c09096ca12py4f01rd7ruh].[none:track_name:nk])</rows>
+        <cols>([federated.0ggd04c09096ca12py4f01rd7ruh].[min:speechiness:qk] + ([federated.0ggd04c09096ca12py4f01rd7ruh].[min:liveness:qk] + ([federated.0ggd04c09096ca12py4f01rd7ruh].[min:energy:qk] + ([federated.0ggd04c09096ca12py4f01rd7ruh].[min:valence:qk] + ([federated.0ggd04c09096ca12py4f01rd7ruh].[min:Calculation_871165053760659459:qk] + ([federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_popularity:qk] + ([federated.0ggd04c09096ca12py4f01rd7ruh].[min:loudness:qk] + [federated.0ggd04c09096ca12py4f01rd7ruh].[min:danceability:qk])))))))</cols>
+      </table>
+      <simple-id uuid='{8BC5905F-1DFC-4A14-91A2-883F74578066}' />
+    </worksheet>
+    <worksheet name='Sheet 4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff' fontname='Tableau Bold'>Top Artists</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='playlist_tracks+ (spotify)' name='federated.0ggd04c09096ca12py4f01rd7ruh' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ggd04c09096ca12py4f01rd7ruh'>
+            <column caption='Rank' datatype='string' name='[Calculation_871165053702324224]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='STR([track_rank])' />
+            </column>
+            <column caption='Artist Name' datatype='string' name='[artist_name]' role='dimension' type='nominal' />
+            <column-instance column='[related_artist_name]' derivation='Attribute' name='[attr:related_artist_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[track_rank]' derivation='Min' name='[min:track_rank:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[artist_name]' derivation='None' name='[none:artist_name:nk]' pivot='key' type='nominal' />
+            <column caption='Num Followers' datatype='integer' name='[num_followers]' role='measure' type='quantitative' />
+            <column caption='Related Artist Name' datatype='string' name='[related_artist_name]' role='dimension' type='nominal' />
+            <column-instance column='[num_followers]' derivation='Sum' name='[sum:num_followers:qk]' pivot='key' type='quantitative' />
+            <column caption='Track Name' datatype='string' name='[track_name]' role='dimension' type='nominal' />
+            <column caption='Track Rank' datatype='integer' name='[track_rank]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ggd04c09096ca12py4f01rd7ruh].[Action (Rank,Track Name)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action3_43B0AED842D64C1EB05EF1D0B1F92352]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Calculation_871165053702324224]' />
+              <groupfilter function='level-members' level='[track_name]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ggd04c09096ca12py4f01rd7ruh].[Action (Track Name)]'>
+            <groupfilter function='level-members' level='[track_name]' user:ui-action-filter='[Action7_9FB6F1BF3F804504A25A67D403D69BAC]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:artist_name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[Action (Rank,Track Name)]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]</column>
+            <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[Action (Track Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]' value='92' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' data-class='subtotal' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]' value='C16393%' />
+            <format attr='text-format' data-class='total' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]' value='' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]' value='#ffffff' />
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='border-width' data-class='total' scope='rows' value='0' />
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+            <format attr='border-width' data-class='total' scope='cols' value='0' />
+            <format attr='border-style' data-class='total' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:artist_name:nk]' value='-90' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:artist_name:nk]' value='#ffffff' />
+            <format attr='font-family' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]' value='Tableau Bold' />
+            <format attr='color' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='1' />
+            <format attr='border-style' data-class='total' value='solid' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-color' id='refline0' value='#000000' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]' value='Num Followers' />
+            <format attr='color' value='#ffffff' />
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='color' value='#ffffff' />
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <tooltip column='[federated.0ggd04c09096ca12py4f01rd7ruh].[attr:related_artist_name:nk]' />
+              <text column='[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#1db954' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]</rows>
+        <cols>[federated.0ggd04c09096ca12py4f01rd7ruh].[none:artist_name:nk]</cols>
+        <show-full-range>
+          <column>[federated.0ggd04c09096ca12py4f01rd7ruh].[Duration (mins) (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{9579F7E9-7991-423E-9348-9E7C4A520DC8}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#000000' />
+        </style-rule>
+      </style>
+      <size maxheight='1700' maxwidth='1500' minheight='1700' minwidth='1500' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='playlist_tracks+ (spotify)' name='federated.0ggd04c09096ca12py4f01rd7ruh' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0ggd04c09096ca12py4f01rd7ruh'>
+        <column caption='Date Released' datatype='datetime' name='[date_released]' role='dimension' type='ordinal' />
+        <column-instance column='[track_rank]' derivation='Min' name='[min:track_rank:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[date_released]' derivation='None' name='[none:date_released:qk]' pivot='key' type='quantitative' />
+        <column caption='Num Followers' datatype='integer' name='[num_followers]' role='measure' type='quantitative' />
+        <column-instance column='[num_followers]' derivation='Sum' name='[sum:num_followers:qk]' pivot='key' type='quantitative' />
+        <column caption='Track Rank' datatype='integer' name='[track_rank]' role='measure' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='10' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='99058' id='15' param='vert' type-v2='layout-flow' w='98934' x='533' y='471'>
+            <zone h='99058' id='11' type-v2='layout-basic' w='98934' x='533' y='471' />
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='30235' id='4' name='Sheet 3' show-title='false' w='41667' x='50333' y='50471' />
+        <zone h='16059' id='5' name='Sheet 3' pane-specification-id='7' param='[federated.0ggd04c09096ca12py4f01rd7ruh].[:Measure Names]' show-title='false' type-v2='color' w='10067' x='91467' y='56588' />
+        <zone h='34059' id='6' name='Sheet 4' w='50133' x='46733' y='10529' />
+        <zone h='3824' id='7' name='Sheet 4' param='[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='10667' x='86533' y='8765' />
+        <zone h='3824' id='9' name='Sheet 3' param='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='10667' x='50333' y='48941' />
+        <zone h='36588' id='18' name='Overview1 ' w='42467' x='1667' y='9588' />
+        <zone h='3824' id='19' name='Overview1 ' param='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:date_released:qk]' type-v2='filter' values='database' w='10667' x='2533' y='1824' />
+        <zone h='3824' id='20' name='Overview1 ' param='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]' type-v2='filter' values='database' w='10667' x='3000' y='6588' />
+        <zone h='33059' id='21' name='Overview2' w='46733' x='933' y='47706' />
+        <zone forceUpdate='true' h='17235' id='22' type-v2='text' w='87200' x='2800' y='81588'>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontname='Tableau Bold' fontsize='11' italic='true'>Note :  These  ranks are as of 01/03/2023</run>
+            <run>Æ&#10;&#10;</run>
+            <run fontcolor='#ffffff' fontname='Tableau Bold' fontsize='11' italic='true'>Audio Features : </run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#e6e6e6'>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#ffffff' fontname='Segoe UI Semilight' italic='true'>1. Valence: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#ffffff' fontname='Segoe UI Semilight' italic='true'>2. Tempo: The overall estimated tempo of a track in beats per minute (BPM).</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#ffffff' fontname='Segoe UI Semilight' italic='true'>3. Speechiness: Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the value.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#ffffff' fontname='Segoe UI Semilight' italic='true'>4. Loudness: The overall loudness of a track in decibels (dB). Values typically range between -60 and 0 db.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#ffffff' fontname='Segoe UI Semilight' italic='true'>5. Liveness: Detects the presence of an audience in the recording.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#ffffff' fontname='Segoe UI Semilight' italic='true'>6. Energy: Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity.</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#ffffff' fontname='Segoe UI Semilight' italic='true'>7. Danceability: Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity.</run>
+          </formatted-text>
+        </zone>
+        <zone forceUpdate='true' h='2176' id='23' type-v2='text' w='26200' x='36600' y='45647'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#ffffff' fontname='Tableau Bold' fontsize='16' italic='true'>-------Audio Features-------</run>
+          </formatted-text>
+        </zone>
+        <zone h='3294' id='26' is-centered='0' is-scaled='1' param='C:/Users/Ankur/Desktop/spotify-download-logo-30.png' type-v2='bitmap' w='4533' x='43600' y='1941' />
+        <zone forceUpdate='true' h='3765' id='27' type-v2='text' w='14933' x='47733' y='1706'>
+          <formatted-text>
+            <run fontcolor='#ffffff' fontname='Franklin Gothic Heavy' fontsize='18'>TOP-50 (INDIA)</run>
+          </formatted-text>
+        </zone>
+        <zone h='3059' id='28' type-v2='dashboard-object' w='10933' x='88933' y='96706'>
+          <button _.fcp.DashboardExportButton.true...button-click-action-metadata='pdf' action='' button-type='text'>
+            <_.fcp.DashboardExportButton.true...export-button-action>tabdoc:abstract-dashboard-button-export-wrapper dashboard-button-export-type=&quot;pdf&quot; dashboarddoc-id=&quot;{8DBA9169-9F53-4601-94D7-C60B44590E91}&quot;</_.fcp.DashboardExportButton.true...export-button-action>
+            <button-visual-state>
+              <button-caption-font-style fontcolor='#ffffff' fontname='Tableau Bold' />
+            </button-visual-state>
+          </button>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1650' minheight='1650' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='25' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='99030' id='24' param='vert' type-v2='layout-flow' w='95734' x='2133' y='485'>
+                <zone h='3333' id='19' name='Overview1 ' param='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:date_released:qk]' type-v2='filter' values='database' w='95734' x='2133' y='485'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3333' id='20' name='Overview1 ' param='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]' type-v2='filter' values='database' w='95734' x='2133' y='3818'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='17455' id='18' is-fixed='true' name='Overview1 ' w='95734' x='2133' y='7151'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3333' id='7' name='Sheet 4' param='[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='95734' x='2133' y='24606'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='17455' id='6' is-fixed='true' name='Sheet 4' w='95734' x='2133' y='27939'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='2727' id='23' type-v2='text' w='95734' x='2133' y='45394'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#ffffff' fontname='Tableau Bold' fontsize='16' italic='true'>-------Audio Features-------</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='17455' id='21' is-fixed='true' name='Overview2' w='95734' x='2133' y='48121'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3333' id='9' name='Sheet 3' param='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='95734' x='2133' y='65576'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='17455' id='4' is-fixed='true' name='Sheet 3' show-title='false' w='95734' x='2133' y='68909'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9393' id='5' name='Sheet 3' pane-specification-id='7' param='[federated.0ggd04c09096ca12py4f01rd7ruh].[:Measure Names]' show-title='false' type-v2='color' w='95734' x='2133' y='86364'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3758' id='22' type-v2='text' w='95734' x='2133' y='95757'>
+                  <formatted-text>
+                    <run fontcolor='#ffffff' fontname='Tableau Bold' fontsize='11' italic='true'>Note :  These  ranks are as of 01/03/2023</run>
+                    <run>Æ&#10;&#10;</run>
+                    <run fontcolor='#ffffff' fontname='Tableau Bold' fontsize='11' italic='true'>Audio Features : </run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#e6e6e6'>------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#ffffff' fontname='Segoe UI Semilight' italic='true'>1. Valence: A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track</run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#ffffff' fontname='Segoe UI Semilight' italic='true'>2. Tempo: The overall estimated tempo of a track in beats per minute (BPM).</run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#ffffff' fontname='Segoe UI Semilight' italic='true'>3. Speechiness: Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the value.</run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#ffffff' fontname='Segoe UI Semilight' italic='true'>4. Loudness: The overall loudness of a track in decibels (dB). Values typically range between -60 and 0 db.</run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#ffffff' fontname='Segoe UI Semilight' italic='true'>5. Liveness: Detects the presence of an audience in the recording.</run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#ffffff' fontname='Segoe UI Semilight' italic='true'>6. Energy: Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity.</run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#ffffff' fontname='Segoe UI Semilight' italic='true'>7. Danceability: Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{8DBA9169-9F53-4601-94D7-C60B44590E91}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='worksheet' name='Overview2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0ggd04c09096ca12py4f01rd7ruh].[my:date_released:ok]' type='filter' />
+            <card pane-specification-id='7' param='[federated.0ggd04c09096ca12py4f01rd7ruh].[none:track_name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{99A63D8D-4504-40B0-B986-8FD89128C29D}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='7' param='[federated.0ggd04c09096ca12py4f01rd7ruh].[:Measure Names]' show-title='false' type='color' />
+          </strip>
+          <strip size='160'>
+            <card param='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+          <strip size='160'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <floating-toolbar-visibility value='1' />
+      </viewpoint>
+      <simple-id uuid='{B2FD685C-C336-495E-8317-502234DEB3EA}' />
+    </window>
+    <window class='worksheet' name='Sheet 4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0ggd04c09096ca12py4f01rd7ruh].[sum:num_followers:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{51377CDF-D30F-40D0-A2CC-9A8C872E63B0}' />
+    </window>
+    <window class='worksheet' name='Overview1 '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0ggd04c09096ca12py4f01rd7ruh].[min:track_rank:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{4B1ED831-AE1C-4C07-87F1-86FAC3673B84}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Overview1 '>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Overview2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 3'>
+          <floating-toolbar-visibility value='1' />
+        </viewpoint>
+        <viewpoint name='Sheet 4'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{DAAE8274-8343-4B35-96F1-2C20A791AC0A}' />
+    </window>
+  </windows>
+</workbook>
