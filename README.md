@@ -17,5 +17,5 @@ To upload the CSV files to a MySQL database, run the to_sql.ipynb notebook.
 To access the Tableau Dashboard, open the .twb file in the Dashboard folder. Alternatively, the dashboard can be accessed on Tableau Public.
 
 ## Credits
-This project was created by [Your Name]. The data was acquired from Spotify.
+This project was created by [Ankur Singh](https://www.linkedin.com/in/ankur-singh-83929818b/). The data was acquired from Spotify.
 
